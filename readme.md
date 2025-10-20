@@ -2,8 +2,10 @@ This script need Biopython, MAFFT and Clipkit to be installed.
 
 If conda is already present:
 
-conda env create -f environment.yml
+# conda env create -f environment.yml
 
-conda activate bioenv
+This creates an environment called bioenv. You can actviate this environment and run the python script there.
 
-python Prepare_for_rerconverge.py
+# conda activate bioenv
+
+# python Prepare_for_rerconverge.py
