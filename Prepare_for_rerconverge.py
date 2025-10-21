@@ -5,7 +5,33 @@ import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
-location = "/mnt/griffin/saubar/Species_sequences" # location of the root folder where all data and analysis will be done 
+print("Step 0: Installing RERconverge")
+script_dir = os.path.dirname(os.path.abspath(__file__))
+if " " in script_dir:
+    print(f"Space in location {script_dir}")
+    assert False
+result = subprocess.run(f"Rscript {script_dir}/Install_rerconverge.r", 
+                        shell=True, 
+                        capture_output=True,  # capture stdout/stderr
+                        text=True)            # return output as string
+
+# Check if the command succeeded
+if result.returncode == 0:
+    print("Step 0: Done successfully!")
+    print("STDOUT:", result.stdout)
+    print("STDERR:", result.stderr)
+else:
+    print("Step 0: Failed!")
+    print("Return code:", result.returncode)
+    print("STDOUT:", result.stdout)
+    print("STDERR:", result.stderr)
+    assert False
+
+location = "/mnt/griffin/saubar/Species_sequences" # location of the root folder where all data and analysis will be done. make sure no spaces are present in location name.
+
+if " " in location:
+    print(f"Space in location {location}")
+    assert False
 
 
 list_of_fasta_files = os.listdir(f"{location}/1.Species_sequences") 

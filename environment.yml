@@ -9,3 +9,6 @@ dependencies:
   - mafft
   - clipkit
   - iqtree
+  - r-essentials
+  - nlopt
+  - r-nloptr

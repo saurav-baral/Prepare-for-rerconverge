@@ -11,6 +11,6 @@ python Prepare_for_rerconverge.py
 ```
 Prepare_for_rerconverge creates MSA using MAFFT and trims it using ClipKit
 If you do not have a species tree run Prepare_species_tree.py, which selects 200 random genes with all species present and creates a species tree.
-```
-python Prepare_for_rerconverge.py
+```bash
+python Prepare_species_tree.py
 ```

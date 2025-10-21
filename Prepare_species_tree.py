@@ -52,4 +52,6 @@ with open(f"{location}/8.For_tree/merged_{max_species}sp.fas", 'w') as out_file:
 
 subprocess.run(f"cd '{location}/8.For_tree'\niqtree -s merged_{max_species}sp.fas -m MFP -nt AUTO", shell = True)
 
+subprocess.run (f"cd '{location}/8.For_tree'\ncp merged_{max_species}sp.fas.treefile ../species_tree.tre", shell = True)
+
 print(f"Step 6: Done")
