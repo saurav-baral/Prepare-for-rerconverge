@@ -8,3 +8,4 @@ dependencies:
   - biopython
   - mafft
   - clipkit
+  - iqtree
