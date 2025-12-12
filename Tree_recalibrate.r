@@ -21,5 +21,7 @@ output_file <- paste0(alndir_name, ".recal.tre")
 estimatePhangornTreeAll(
   alndir      = alndir_name,
   treefile    = "species_tree.tre",
-  output.file = output_file
+  output.file = output_file,
+  type = "DNA",
+  submodel = "GTR"
 )
